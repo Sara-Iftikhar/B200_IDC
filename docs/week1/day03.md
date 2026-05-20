@@ -355,7 +355,7 @@ The final step is to save the spi2 files in EMBL submission format and create a 
 
 ![A screenshot of a computer Description automatically generated](./images3_1/image54.png)
 
-![A screenshot of a computer Description automatically generated](./media/image56.png)
+![A screenshot of a computer Description automatically generated](./images3_1/image56.png)
 
 Now open the EMBL format file that you have just created in Artemis.
 
