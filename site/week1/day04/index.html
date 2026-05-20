@@ -1,0 +1,2165 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="10-day intensive course on epidemiology, genomics, and outbreak analysis">
+      
+      
+        <meta name="author" content="King Abdullah University of Science and Technology (KAUST)">
+      
+      
+      
+        <link rel="prev" href="../day03/">
+      
+      
+        <link rel="next" href="../day05/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.jpeg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Day 4 - Infectious Diseases Concepts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#day-4-genome-assembly-and-variant-calling" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Infectious Diseases Concepts" class="md-header__button md-logo" aria-label="Infectious Diseases Concepts" data-md-component="logo">
+      
+  <img src="../../assets/logo.jpeg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Infectious Diseases Concepts
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Day 4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../course_info/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Info
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../schedule/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../prerequisites/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Prerequisites
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../setup/index.md" class="md-tabs__link">
+          
+  
+  
+  Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../day01/" class="md-tabs__link">
+          
+  
+  
+  Week 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../week2/day06/" class="md-tabs__link">
+          
+  
+  
+  Week 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../assignments/mini-exercises.md" class="md-tabs__link">
+          
+  
+  
+  Assignments
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../resources/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Infectious Diseases Concepts" class="md-nav__button md-logo" aria-label="Infectious Diseases Concepts" data-md-component="logo">
+      
+  <img src="../../assets/logo.jpeg" alt="logo">
+
+    </a>
+    Infectious Diseases Concepts
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course_info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Info
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prerequisites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/r.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    R & RStudio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/linux.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/hpc.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HPC access
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/datasets.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datasets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 4
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bandage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bandage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blast-installation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLAST Installation Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bandage-installation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bandage Installation Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aliview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AliView
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aliview-installation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AliView Installation Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week2/day06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week2/day07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week2/day08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week2/day09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week2/day10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignments
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Assignments
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assignments/mini-exercises.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mini exercises
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assignments/final-project.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Final project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bandage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bandage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blast-installation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BLAST Installation Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bandage-installation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bandage Installation Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aliview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AliView
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aliview-installation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AliView Installation Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="day-4-genome-assembly-and-variant-calling">Day 4: Genome Assembly and Variant Calling<a class="headerlink" href="#day-4-genome-assembly-and-variant-calling" title="Permanent link">&para;</a></h1>
+<h2 id="bandage">Bandage<a class="headerlink" href="#bandage" title="Permanent link">&para;</a></h2>
+<p>Bandage (short for <strong>Bioinformatics Application for Navigating De novo
+Assembly Graphs Easily</strong>) is a user-friendly tool for visualising and
+exploring genome assembly graphs. Bandage makes these graphs accessible,
+allowing you to visually inspect the structure of your assembly.</p>
+<p>This can help you understand, debug, and improve your results. You can
+zoom, pan, customise the graph view, search for specific sequences,
+extract regions of interest, and more --- all in an interactive
+interface.</p>
+<p>To enable Bandage's sequence search functionality (e.g., using the
+"Create BLAST" tool), you need to have <strong>BLAST+</strong> installed on your
+system. Bandage relies on BLAST to perform local sequence alignment
+within the assembly graph.</p>
+<hr />
+<h2 id="blast-installation-steps">BLAST Installation Steps<a class="headerlink" href="#blast-installation-steps" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Open the website:\
+    https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.2.31/</p>
+</li>
+<li>
+<p>Download the version that matches your computer's configuration.</p>
+</li>
+<li>
+<p>Double-click the software package and follow the installation
+    instructions.</p>
+</li>
+</ol>
+<hr />
+<h2 id="bandage-installation-steps">Bandage Installation Steps<a class="headerlink" href="#bandage-installation-steps" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Open the website:\
+    https://github.com/rrwick/Bandage</p>
+</li>
+<li>
+<p>Download the version that matches your computer's configuration.</p>
+</li>
+<li>
+<p>Unzip the file and move <code>Bandage.app</code> to your Applications
+    directory.</p>
+</li>
+<li>
+<p>If you get a <strong>"Bandage is damaged and can't be opened"</strong> message,
+    run the following command in Terminal to clear the quarantine flag:</p>
+</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>xattr<span class="w"> </span>-cr<span class="w"> </span>/Applications/Bandage.app
+</code></pre></div>
+
+<hr />
+<h2 id="aliview">AliView<a class="headerlink" href="#aliview" title="Permanent link">&para;</a></h2>
+<p>AliView is a fast and user-friendly alignment viewer and editor designed
+to handle large multiple sequence alignments efficiently. It supports a
+wide range of alignment formats, including <strong>FASTA, PHYLIP, NEXUS, and
+Clustal</strong>, making it a versatile tool for exploring genomic data.</p>
+<hr />
+<h2 id="aliview-installation-steps">AliView Installation Steps<a class="headerlink" href="#aliview-installation-steps" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Open the website:\
+    http://www.ormbunkar.se/aliview/</p>
+</li>
+<li>
+<p>Download the installation package corresponding to your system.</p>
+</li>
+<li>
+<p>Unzip the file and follow the installation instructions.</p>
+</li>
+</ol>
+<p><strong>IDE Course -- Day 4: Genome Assembly and Variant Calling</strong></p>
+<p>Genome assembly and variant calling are central to genomic analysis,
+often working together within the same research pipeline. Genome
+assembly involves reconstructing the complete DNA sequence of an
+organism from raw sequencing reads, particularly important when a
+reference genome is unavailable or incomplete. The resulting assembly
+can serve as a high-quality reference for further analyses. Variant
+calling, on the other hand, focuses on identifying genetic
+differences---such as SNPs, insertions, deletions, and structural
+variants---between individuals or strains. This is typically achieved by
+mapping sequencing reads to a reference genome. The accuracy and
+completeness of the reference, whether publicly available or newly
+assembled, directly influence the reliability of variant detection. In
+this tutorial, we explore both genome assembly and variant calling,
+illustrating how they complement each other in genomic studies. You'll
+learn how to construct genome assemblies and use them or existing
+references to detect variants from read alignment, providing insights
+into genome structure and diversity.</p>
+<p><strong>Introduction to Genome Assembly</strong></p>
+<p>Recent advances in DNA sequencing technology have revolutionised the
+study of organisms at the genomic and transcriptomic levels. These
+improvements have enabled detailed analyses of genomic variation, gene
+identification, structural rearrangements, and population-scale
+comparisons. In this module, we introduce the principles of genome
+assembly, with a focus on combining modern sequencing data and assembly
+strategies to reconstruct accurate genome structures.</p>
+<p>Previously, most sequencing data came from short-read technologies such
+as the Illumina Genome Analyzer II, producing large volumes of short
+(typically 35--150 bp) DNA fragments. Modern Illumina platforms (e.g.,
+NovaSeq, NextSeq) now yield hundreds of gigabases of sequence data in a
+single run, enabling deep coverage of complex genomes. However,
+short-read assemblies often result in fragmented genomes with many
+contigs, due to difficulties resolving repetitive elements longer than
+individual reads.</p>
+<p>To address these limitations, long-read sequencing technologies such as
+Oxford Nanopore Technologies (ONT) and Pacific Biosciences (PacBio) have
+emerged. These platforms produce read lengths ranging from several
+kilobases up to megabases (in the case of ONT), greatly simplifying
+genome assembly by spanning repetitive regions and structural variants.
+PacBio's HiFi reads provide long sequences with high per-base accuracy
+(\~99.9%), while ONT continues to improve in both throughput and
+accuracy, making it highly suitable for real-time and portable
+sequencing.</p>
+<p>Despite their strengths, long-read technologies can still benefit from
+integration with short-read data. Hybrid assembly approaches leverage
+the high accuracy of Illumina reads with the structural resolving power
+of long reads. The assembly process remains fundamentally about
+reconstructing full genome sequences from fragmented reads by detecting
+overlaps and connecting sequences.</p>
+<p>This process---genome assembly---involves aligning and ordering these
+reads into larger structures called contigs and scaffolds. A common
+computational approach for assembling short reads is to construct de
+Bruijn graphs, where reads are broken into overlapping subsequences
+(k-mers), and graph structures help resolve paths representing genomic
+sequences. Assemblers such as Velvet and ABySS were pioneers in
+short-read graph-based assembly.</p>
+<p>In this module, however, we will focus on tools optimised for hybrid or
+long-read assembly, particularly Unicycler. Unicycler uses a multi-stage
+approach that can operate in short-read-only, long-read-only, or hybrid
+modes, combining the best of both worlds. It integrates accurate
+short-read contigs with long-read scaffolding to generate highly
+contiguous, and often complete, bacterial genome assemblies.</p>
+<p><strong>Aims</strong></p>
+<p>By the end of this module, you will understand:</p>
+<ul>
+<li>
+<p>The differences between short-read and long-read sequencing
+    technologies</p>
+</li>
+<li>
+<p>Challenges associated with genome assembly</p>
+</li>
+<li>
+<p>Key concepts like contigs and assembly graphs</p>
+</li>
+<li>
+<p>How to run and evaluate genome assemblies using Unicycler and Quast</p>
+</li>
+</ul>
+<p>Whether you're assembling a simple bacterial genome, the principles
+introduced here will serve as a solid foundation for your bioinformatics
+practice.</p>
+<p><strong>Background for Unicycler</strong></p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image1.png" />{width="2.515384951881015in"
+height="0.880653980752406in"}</p>
+<p>Unicycler (https://github.com/rrwick/Unicycler) is a powerful and
+easy-to-use genome assembly pipeline tailored for bacterial genomes,
+offering flexible support for a range of sequencing data types. It is
+designed to deliver high-quality assemblies using short reads
+(Illumina), long reads (Oxford Nanopore or PacBio), or a hybrid of both,
+making it highly adaptable for different experimental setups.</p>
+<p>In short-read-only mode, Unicycler functions as a SPAdes optimiser,
+producing improved assemblies by refining and resolving assembly graphs.
+Its real strength lies in hybrid assembly, where it uses the accuracy of
+Illumina reads to build a backbone and the length of long reads to
+resolve complex regions and repeats, leading to high-contiguity,
+low-error assemblies, often with circularised plasmids and chromosomes.</p>
+<p>Unicycler is especially suited for plasmid-rich bacterial genomes and
+performs well even with low-coverage long-read data. It can also resolve
+highly repetitive genomic regions that are otherwise difficult to
+assemble using short reads alone. The output includes not just contigs
+in FASTA format, but also an assembly graph (viewable with tools like
+Bandage), which provides a clearer view of genome structure, especially
+when assemblies are not fully complete.</p>
+<p>Additional strengths include automated circularisation (removing the
+need for post-processing tools like Circlator), contamination filtering,
+and low misassembly rates, all wrapped in a pipeline that typically runs
+with just a single command.</p>
+<p>However, Unicycler is not suitable for eukaryotic or metagenomic
+datasets, and it assumes that all input reads originate from the same
+bacterial isolate. Despite not being the fastest assembler, its
+thoroughness and reliability make it an excellent choice for bacterial
+genome projects requiring clean, accurate assemblies.</p>
+<p><strong>Start with your first genome assembly</strong></p>
+<p><em>Klebsiella pneumoniae</em> is a clinically significant Gram-negative
+bacterium, commonly associated with hospital-acquired infections,
+including pneumonia, bloodstream infections, and urinary tract
+infections. It is particularly concerning due to its capacity to acquire
+and disseminate antimicrobial resistance genes, making it a priority
+pathogen for surveillance and research.</p>
+<p>The genome of <em>K. pneumoniae</em> typically consists of a \~5--6 Mb circular
+chromosome and multiple plasmids, many of which carry resistance or
+virulence factors. The genomic complexity of <em>K. pneumoniae</em>, including
+repetitive elements and plasmid content, makes it an excellent case
+study for genome assembly and variant analysis. In today's session, we
+will use real <em>K. pneumoniae</em> sequencing data to explore genome assembly
+techniques and identify genomic variation, gaining insights into both
+the technical challenges and biological relevance of genomic analysis in
+this important pathogen.</p>
+<p>Now, log in to IBEX and copy today's tutorial materials to your scratch
+folder</p>
+<p>ssh -X \&lt;YourUserName&gt;@ilogin.ibex.kaust.edu.sa</p>
+<p>cp -r
+/ibex/project/c2325/B294c/Practical_sessions/Day4_Assembly_Mapping/*
+/ibex/user/\&lt;YourUserName&gt;</p>
+<p>ls</p>
+<hr />
+<p>HKPR018_1.fq.gz                     Forward reads for Sample HKPR018
+                                      within ziped fastq format</p>
+<hr />
+<p>HKPR018_2.fq.gz                     Reverse reads for Sample HKPR018
+                                      within ziped fastq format</p>
+<p>assembly_unicycler_short.sh         Script for running Unicycler</p>
+<hr />
+<p>View the script with your prefer editor, for example:</p>
+<p>nano assembly_unicycler_short.sh</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image2.png" />{width="6.480406824146981in"
+height="3.6923075240594927in"}</p>
+<p>1. Requesting 32 threads for this genome assembly job. Genome assembly
+is highly computationally demanding, and using more threads should
+accelerate the process. However, it may still encounter bottlenecks. Try
+adjusting this option and observe how it affects the assembly runtime.</p>
+<p>2. Request for 64 GB RAM for this computation job.</p>
+<p>3. Load the software package Unicycler</p>
+<p>4. Command for running Unicycler:</p>
+<p>-1 FASTQ file of forward reads in each pair</p>
+<p>-2 FASTQ file of reverse reads in each pair</p>
+<p>-o Output directory</p>
+<p>-t Number of threads used (matched above number we requested)</p>
+<p>Close the text editor and submit your first genome assembly job</p>
+<p>sbatch assembly_unicycler_short.sh</p>
+<p>The running time may take up to 10 minutes, be patient!</p>
+<p>Once the job has been finished, let's view the output folder:</p>
+<p>ll -lh</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image3.png" />{width="5.437018810148731in"
+height="1.8076924759405075in"}</p>
+<p>1.</p>
+<p>*_spades_graph_k*.gfa: unaltered SPAdes assembly graphs at each k-mer
+size</p>
+<p>*_depth_filter.gfa: best SPAdes short-read assembly graph after
+low-depth contigs have been removed and multiplicity determination</p>
+<p>*_overlaps_removed.gfa: overlap-free version of the best SPAdes graph,
+with some more graph clean-up</p>
+<p>*_bridges_applied.gfa: bridges applied, before any cleaning or merging</p>
+<p>*_cleaned.gfa: redundant contigs removed from the graph</p>
+<p>We won't go in-depth for these files, but if you want to know more about
+gfa file format:
+https://github.com/GFA-spec/GFA-spec/blob/master/GFA1.md</p>
+<p>2.</p>
+<p>assembly.fasta: final assembly in FASTA format (same sequences as in
+assembly.gfa except for very short contigs)</p>
+<p>unicycler.log: Unicycler log file (same info as was printed to stdout)</p>
+<p><strong>Evaluate your genome assembly</strong></p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image4.png" />{width="2.292307524059493in"
+height="0.8650218722659667in"}</p>
+<p>After generating a genome assembly, it is essential to assess its
+quality before proceeding with downstream analyses. Assembly evaluation
+provides insight into how complete, accurate, and contiguous the
+reconstructed genome is, helping to identify potential issues such as
+fragmentation, misassemblies, or missing regions.</p>
+<p>Key metrics used to evaluate assemblies include the number of contigs,
+total assembly length, N50 (a measure of contiguity), GC content, and
+alignment to a reference genome when available. These statistics help
+determine whether the assembly sufficiently represents the organism's
+genome and whether further refinement is needed.</p>
+<p>QUAST (Quality Assessment Tool for Genome Assemblies) is a widely used
+software tool that automates this evaluation process. It generates
+detailed summary reports and plots, comparing assemblies to a reference
+genome if provided. QUAST can highlight misassembled regions, estimate
+genome completeness, and compare multiple assemblies
+side-by-side---making it an indispensable tool for genome assembly
+projects. In this session, we'll use QUAST to assess the quality of our
+<em>K. pneumoniae</em> assemblies.</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image5.png" />{width="6.5in"
+height="3.2152777777777777in"}View the script with your prefer editor:</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image6.png" />{width="3.657638888888889in"
+height="4.315277777777778in"}After a few minutes, it should finish
+running, let's view the result. The summary table is in report.txt</p>
+<p>We focuse on the few key metrics: Number of large contigs (i.e., longer
+than 500 bp) and total length of them; Length of the largest contig; N50
+(length of a contig, such that all the contigs of at least the same
+length together cover at least 50% of the assembly). There are no strict
+or universal thresholds for these genome assembly metrics. This is
+because acceptable values can vary depending on the organism, the
+sequencing technology used, and the intended downstream analysis.
+Instead of relying on fixed cutoffs, it's often more meaningful to
+compare assembly statistics across a batch of samples processed under
+similar conditions. This comparative approach helps identify outliers or
+problematic assemblies relative to the group.</p>
+<p>Additionally, assemblies generated from short reads alone (e.g.,
+Illumina) often remain fragmented, particularly in repetitive or
+plasmid-rich genomes like Klebsiella pneumoniae. However, the
+incorporation of long-read sequencing technologies (such as Oxford
+Nanopore or PacBio) can significantly improve assembly quality by
+spanning repeats and resolving complex regions. As long-read data
+becomes more available, we can expect higher contiguity, fewer contigs,
+and more complete assemblies, bringing us closer to accurate, closed
+bacterial genomes.</p>
+<p><strong>Improve your assembly with ONT (Oxford Nanopore) data</strong></p>
+<p>If your short-read assembly has too many contigs, unresolved repeats, or
+broken plasmids---This is where long reads come in. Technologies like
+Oxford Nanopore produce much longer reads that can bridge tricky
+regions, resolve repeats, and help us piece together a far more complete
+genome. Even if your long-read data isn't perfect or ultra-deep,
+combining it with Illumina reads in a hybrid assembly can make a huge
+difference.</p>
+<p>In this part of the session, we'll see just how powerful long reads can
+be. We'll feed both short and long reads into Unicycler, and watch it
+clean up the assembly---fewer contigs and a fully circularised
+chromosome and plasmid.</p>
+<p>See the files and the hybrid assembly code in this part:</p>
+<p>ls</p>
+<hr />
+<p>HKPR018_1.fq.gz                     Forward reads for Sample HKPR018
+                                      within ziped fastq format</p>
+<hr />
+<p>HKPR018_2.fq.gz                     Reverse reads for Sample HKPR018
+                                      within ziped fastq format</p>
+<p>HKPR018_L.fastq.gz                  ONT reads for Sample HKPR018 within
+                                      ziped fastq format</p>
+<p>assembly_unicycler_hybrid.sh        Script for conducting hybrid
+                                      assembly</p>
+<hr />
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image7.png" />{width="5.776388888888889in"
+height="3.6173611111111112in"}View the script with your prefer editor:</p>
+<p>1. Requesting 64 threads for hybrid genome assembly job. With the long
+reads, the reads alignment is more computationally demanding. We using
+more threads should accelerate the process.</p>
+<p>2. Request for 128 GB RAM for this computation job.</p>
+<p>3. Load the software package Unicycler</p>
+<p>4. Command for running Unicycler:</p>
+<p>-1 FASTQ file of forward reads in each pair</p>
+<p>-2 FASTQ file of reverse reads in each pair</p>
+<p>-l FASTQ file of long reads</p>
+<p>-o Output directory</p>
+<p>-t Number of threads used (matched above number we requested)</p>
+<p>--mode Bridging mode</p>
+<p>conservative = smaller contigs, lowest misassembly rate</p>
+<p>normal = moderate contig size and misassembly rate</p>
+<p>bold = longest contigs, higher misassembly rate</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image8.png" />{width="5.861538713910761in"
+height="1.6876968503937009in"}</p>
+<p>Unicycler has three assembly modes you can choose from: conservative,
+normal (default), and bold---set using the --mode option. Each mode
+balances two things: how complete the assembly is and how accurate it
+is.</p>
+<ul>
+<li>
+<p>Conservative mode avoids taking risks, so your assembly is less
+    likely to have errors, but it might be incomplete.</p>
+</li>
+<li>
+<p>Bold mode takes more chances to try and finish the assembly. It's
+    more likely to give you a complete genome, but there's a higher
+    chance of small mistakes.</p>
+</li>
+<li>
+<p>Normal mode sits in between---it tries to give a good balance of
+    completeness and accuracy.</p>
+</li>
+</ul>
+<p>Choose the mode based on your needs. If having a very accurate structure
+is most important, go with conservative. In our case we chose the
+conservative mode, to avoid any misassembly the reads. In future
+plasmidome analysis, we aim for a accuracy plasmid stuructue.</p>
+<p>Close the text editor and submit your hybrid genome assembly job</p>
+<p>sbatch assembly_unicycler_hybrid.sh</p>
+<p>The running time may take up to <strong>20</strong> minutes, longer time than only
+short reads.</p>
+<p>Once the job has been finished, view the output folder and make sure the
+final assembly file (assembly.fasta) is in your output folder. The
+folder sturcture remain same with the short reads only assembly.</p>
+<p>Change the code for 'assembly_qc.sh' as below and run Quast for the
+hybrid asssembly.</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image9.png" />{width="6.5in"
+height="2.579861111111111in"}</p>
+<p>1. Create a new folder to store the QUAST output for hybrid assembly.
+This will help keep your results organized and separate from other
+assemblies.</p>
+<p>2. Run QUAST using your hybrid assembly file as the input, and specify
+the new folder as the output directory. Make sure to replace the input
+file with your hybrid assembly FASTA file, and direct the results to the
+folder you just created.</p>
+<p>Sbatch the code and wait for it finish running. Let's view the new Quast
+output:</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image10.png" />{width="3.603649387576553in"
+height="4.176923665791776in"}</p>
+<p>By comparing the hybrid assembly results with the short-read-only
+assembly, you'll notice a significant reduction in the number of
+contigs. This indicates a much higher level of continuity in the genome
+assembly. Additionally, the N50 value has increased by over 12-fold,
+reflecting the assembly's improved quality and longer contiguous
+sequences.</p>
+<p>To have a intutive view of the assembly quality improvement, we can view
+the assembly file through Bandage</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image11.png" />{width="2.553846237970254in"
+height="1.1111472003499563in"}</p>
+<p>Bandage (short for Bioinformatics Application for Navigating De novo
+Assembly Graphs Easily) is a user-friendly tool for visualizing and
+exploring genome assembly graphs. Bandage makes these graphs accessible,
+allowing you to visually inspect the structure of your assembly. This
+can help you understand, debug, and improve your results. You can zoom,
+pan, customise the graph view, search for specific sequences, extract
+regions of interest, and more---all in an interactive interface.</p>
+<p>Download your assembly to your local machine and open the bandage:</p>
+<p>To download a file from a remote server to your local computer, you can
+use the scp (secure copy) command on your own computer (NOT IBEX):</p>
+<p>Open the terminal on your computer and try below command:</p>
+<p>scp
+\&lt;YourUserName&gt;@ilogin.ibex.kaust.edu.sa:/ibex/user/\&lt;YourUserName&gt;/path/for/your
+/assembly /path/to/local/destination</p>
+<p>Load the assembly file to Bandge:</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image12.png" />{width="5.762295494313211in"
+height="4.008980752405949in"}</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image13.png" />{width="5.7875in"
+height="3.7333333333333334in"}Let's view the short read assembly first:</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image14.png" />{width="5.788091644794401in"
+height="3.6769225721784777in"}</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image15.png" />{width="5.7875in"
+height="3.707638888888889in"} You can see that the fragmented genome
+assembly contains over a hundred contigs, making it difficult to
+accurately resolve the chromosome or plasmid structures. However, if you
+view the hybrid assembly file in Bandage, the graph appears more
+contiguous and easier to interpret. Note that Bandage assigns colors to
+contigs randomly each time a file is opened, so the colors in your view
+may differ from those shown in this tutorial figure.</p>
+<p>You can see the contigs are well circularised and structured for the
+bacterial genome. How can we analyse these contigs and characterise them
+as belonging to chromosomes or plasmids? We will discuss this part on
+Day 8.</p>
+<p><strong>Introduction to reads mapping and variant calling</strong></p>
+<p>Read mapping is a key step in genome analysis where sequencing reads are
+aligned to a reference genome to identify similarities and differences.
+This process helps us detect genetic variations within a sample,
+especially single nucleotide polymorphisms (SNPs)---single base changes
+in the DNA sequence.</p>
+<p>By aligning reads from a sequencing reads to a known reference genome,
+we can pinpoint the exact locations where the sample genome differs.
+These SNPs serve as powerful genetic markers for studying evolutionary
+relationships, epidemiological tracking, and functional changes in the
+genome.</p>
+<p>Accurate SNP detection depends on high-quality read alignment and
+sufficient sequencing coverage. In this session, we will map sequencing
+reads to the <em>K. pneumoniae</em> reference genome and perform SNP calling,
+providing insights into genomic variation that can inform further
+research into antimicrobial resistance, virulence, and population
+structure.</p>
+<p><strong>Aims</strong></p>
+<p>By the end of this module, you will understand:</p>
+<ul>
+<li>
+<p>Understand the concept of read mapping and how it allows comparison
+    between sequencing reads and a reference genome to detect genetic
+    differences.</p>
+</li>
+<li>
+<p>Learn how to perform SNP calling from mapped reads to identify
+    single nucleotide variations in Klebsiella pneumoniae isolates.</p>
+</li>
+</ul>
+<p><strong>Introduction to Snippy</strong></p>
+<p>Snippy (<a href="https://github.com/tseemann/snippy">https://github.com/tseemann/snippy</a>) is a fast and
+user-friendly tool designed for haploid variant calling and core genome
+alignment, particularly well-suited for bacterial genomes. Developed by
+Torsten Seemann, Snippy compares sequencing reads from your sample
+against a single reference genome to identify single nucleotide
+polymorphisms (SNPs) as well as small insertions and deletions (indels).
+Snippy is optimised for speed and scalability making it ideal for
+high-throughput environments. It outputs a comprehensive and
+standardised set of results in a single folder, making downstream
+processing simple and consistent.</p>
+<p>In this session, we'll use Snippy to explore genomic variation in
+Klebsiella pneumoniae and prepare data for comparative and evolutionary
+analysis.</p>
+<p><strong>Mapping reads against the reference genome</strong></p>
+<p>Here we use the NCBI RefSeq of <em>Klebsiella pneumoniae</em> Ecl8, a Reference
+Strain for Targeted Genetic Manipulation (acc: HF536482.1) as the
+reference genome.</p>
+<p>Check the file you need for this session is already in your working
+folder:</p>
+<hr />
+<p>HKPR018_1.fq.gz                     Forward reads for Sample HKPR018
+                                      within ziped fastq format</p>
+<hr />
+<p>HKPR018_2.fq.gz                     Reverse reads for Sample HKPR018
+                                      within ziped fastq format</p>
+<p>reference.gbk.gb                    Reference genome in GenBank format</p>
+<p>mapping_snippy.sh                   Script for mapping by Snippy</p>
+<hr />
+<p>View the script with your preferred editor:
+<img alt="" src="/mnt/data/images_day4_tutorial/media/image16.png" />{width="5.992307524059493in"
+height="3.898840769903762in"}</p>
+<p>1. Requesting 16 threads for this mapping job. Mapping the reads
+usually requires less computational resources for the mapping, we use 16
+to speed up</p>
+<p>2. Request for 8 GB RAM for this computation job</p>
+<p>3. Load the software package Snippy</p>
+<p>4. Command for running Snippy:</p>
+<p>--cpus Number of threads used (matched above number we requested)</p>
+<p>--outdir Output directory</p>
+<p>--ref Reference genome in Genbank format</p>
+<p>--R1 FASTQ file of forward reads in each pair</p>
+<p>--R2 FASTQ file of reverse reads in each pair</p>
+<p>Close the text editor and submit your first genome assembly job</p>
+<p>sbatch mapping_snippy.sh</p>
+<p>The running time may take up to 10 minutes.</p>
+<p>Once the job has been finished, view the output folder:</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image17.png" />{width="6.5in"
+height="3.2055555555555557in"}</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image18.png" />{width="5.584027777777778in"
+height="2.5340277777777778in"}Snippy performs variant calling by
+aligning sequencing reads to a reference genome, followed by variant
+detection with in this process. Snippy filters variant calls based on
+quality thresholds to ensure high-confidence results. By default, it
+requires a minimum read depth of 10, a minimum base quality of 13, a
+minimum mapping quality of 60, and an allele frequency of at least 90%
+to confidently call a variant. Mapping quality reflects how confidently
+a read is placed in a unique position in the genome---higher values mean
+less chance the read maps to multiple locations. Allele frequency refers
+to the proportion of reads at a given position that support a particular
+variant; requiring 90% ensures that only strong, consistent signals are
+considered true variants. It outputs annotated variant files, a
+consensus genome sequence, and alignment files.</p>
+<p>Feel free to explore the output files in various formats. However, for
+our downstream analysis, we will focus on the snps.consensus.subs.fa
+file. This file is a modified version of the reference genome in which
+only the high-confidence SNPs identified in the sample have been
+substituted, while all other positions remain unchanged. It excludes
+insertions and deletions to ensure alignment consistency across samples.
+Snippy generates this file by aligning reads to the reference, calling
+variants, filtering based on quality metrics, and then incorporating
+only the substitution SNPs into the consensus sequence. This simplified,
+SNP-only consensus makes it ideal for building a SNP alignment across
+multiple isolates, allowing us to compare variation at shared genomic
+positions and infer relationships between the genomes.</p>
+<p>+-------------+--------------------------------------------------------+
+| **          | <strong>Description</strong>                                        |
+| Extension<strong> |                                                        |
++-------------+--------------------------------------------------------+
+| .tab        | A                                                      |
+|             | simple <a href="http              |
+|             | ://en.wikipedia.org/wiki/Tab-separated_values">[tab-separated]{.underline}</a> summary |
+|             | of all the variants                                    |
++-------------+--------------------------------------------------------+
+| .csv        | A <a href="http:/               |
+|             | /en.wikipedia.org/wiki/Comma-separated_values">[comma-separated]{.underline}</a> version |
+|             | of the .tab file                                       |
++-------------+--------------------------------------------------------+
+| .html       | A <a href="http://en.wikipedia.org/wiki/HTML">[HTML]{.                                            |
+|             | underline}</a> version |
+|             | of the .tab file                                       |
++-------------+--------------------------------------------------------+
+| .vcf        | The final annotated variants                           |
+|             | in <a href="ht                              |
+|             | tp://en.wikipedia.org/wiki/Variant_Call_Format">[VCF]{.underline}</a> format |
++-------------+--------------------------------------------------------+
+| .bed        | The variants                                           |
+|             | in <a href="htt                             |
+|             | p://genome.ucsc.edu/FAQ/FAQformat.html#format1">[BED]{.underline}</a> format |
++-------------+--------------------------------------------------------+
+| .gff        | The variants                                           |
+|             | in <a href="http://www.sequenceontology.org/gff3.shtml">[GFF3]{.underlin                                   |
+|             | e}</a> format |
++-------------+--------------------------------------------------------+
+| .bam        | The alignments                                         |
+|             | in <a href="http://en.wikipedia.org/wiki/SAMtools">[BAM]{.unde                                        |
+|             | rline}</a> format. |
+|             | Includes unmapped, multimapping reads.                 |
+|             |                                                        |
+|             | Excludes duplicates.                                   |
++-------------+--------------------------------------------------------+
+| .bam.bai    | Index for the .bam file                                |
++-------------+--------------------------------------------------------+
+| .log        | A log file with the commands run and their outputs     |
++-------------+--------------------------------------------------------+
+| .aligned.fa | A version of the reference but with -- at position     |
+|             | with depth=0                                           |
+|             |                                                        |
+|             | and N for 0 \&lt; depth \&lt; --mincov (</strong>does not have     |
+|             | variants<em><em>)                                            |
++-------------+--------------------------------------------------------+
+| .c          | A version of the reference genome with </em>all</em> variants  |
+| onsensus.fa | instantiated                                           |
++-------------+--------------------------------------------------------+
+| .consen     | A version of the reference genome with <em>only           |
+| sus.subs.fa | substitution</em> variants instantiated                    |
++-------------+--------------------------------------------------------+
+| .raw.vcf    | The unfiltered variant calls from Freebayes            |
++-------------+--------------------------------------------------------+
+| .filt.vcf   | The filtered variant calls from Freebayes              |
++-------------+--------------------------------------------------------+
+| .vcf.gz     | Compressed .vcf file                                   |
+|             | via <a href="http://blastedbio.blogspo    |
+|             | t.com.au/2011/11/bgzf-blocked-bigger-better-gzip.html">[BGZIP]{.underline}</a> |
++-------------+--------------------------------------------------------+
+| .vcf.gz.csi | Index for the .vcf.gz via bcftools index)              |
++-------------+--------------------------------------------------------+</p>
+<p><strong>Multi-Isolate SNP Calling Using Consensus Alignments</strong></p>
+<p>Next, we will take the snps.consensus.subs.fa files generated from
+multiple isolates and combine them into a single multi-FASTA file. This
+file represents the SNP-only consensus sequences for each genome,
+aligned to the same reference. Since all sequences are of equal length
+and aligned by position, they are ready for comparative analysis.</p>
+<p><strong>Introduction to SNP-sites</strong></p>
+<p>snp-sites is a fast and lightweight tool designed to efficiently extract
+SNPs from a multi-FASTA alignment. It identifies polymorphic sites
+across aligned genomes and outputs them in multiple formats (e.g. VCF,
+FASTA, PHYLIP) suitable for downstream analysis like phylogenetics or
+genome-wide association studies. Remarkably, it can process large
+datasets using minimal computational resources---for example, parsing an
+8.3 GB alignment with over 1,800 taxa in under five minutes using just a
+single CPU and 59 MB of RAM. This makes snp-sites an ideal choice for
+scalable SNP calling in bacterial genomics.</p>
+<p>Let's start! To generate a multiple-FASTA alignment, we need to rename a
+bit for our output fasta from the mapping</p>
+<p>cp ./mapping/snps.consensus.subs.fa ./HKPR018.consensus.subs.fa</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image19.png" />{width="4.438194444444444in"
+height="3.202777777777778in"}Open the FASTA file with your preferred
+text editor and edit the FASTA tag to the sample name</p>
+<p>To save time for this practical session, we provide several mapped
+genomes from our group collection, next we need to concatenate them to
+make a single alignment file</p>
+<p>cat ./*.consensus.subs.fa &gt; Kp.aln</p>
+<p>You can visualise the alignment in Aliview (Download the alignment file
+and open it with Aliview)</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image20.png" />{width="6.5in"
+height="1.6784722222222221in"}</p>
+<p>Scroll through the alignment, you can see the SNP base in different
+samples, see below for example:</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image21.png" />{width="6.5in"
+height="1.7048611111111112in"}</p>
+<p>We will use the SNP-site to take these SNPs out from different genomes.</p>
+<hr />
+<p>Kp.aln                              The alignment file for all 11
+                                      samples</p>
+<hr />
+<p>call_snp_sites.sh                   Script for running SNP-site</p>
+<hr />
+<p>View the script through the text editor:</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image22.png" />{width="6.5in"
+height="3.3513888888888888in"}</p>
+<p>1. Requesting 1 thread for this job. SNP-sites doesn't support parallel
+computing.</p>
+<p>2. Request for 4 GB RAM for this computation job</p>
+<p>3. Load the software package snp-sites</p>
+<p>4. Command for running SNP-sites:</p>
+<p>-m Outputs a multi fasta alignment file (default)</p>
+<p>-v Outputs a VCF file</p>
+<p>-p Outputs a phylip file</p>
+<p>-o Specify an output filename</p>
+<p>Kp.aln Input alignment file</p>
+<p>Running SNP-sites is very fast (\~20s), check the output file</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image23.png" />{width="6.5in"
+height="0.49027777777777776in"}</p>
+<p>*.snp_sites.aln: Similar to the input file but just containing the SNP
+sites.</p>
+<p>*.vcf: This contains the position of each SNP in the reference
+sequence, and the occurrence in each other sample. Can be loaded into
+Artemis for visualisation.</p>
+<p>*.phylip: All the SNP sites in a format for RAxML and other tree
+building applications.</p>
+<p>Feel free to explore the Phylip and VCF files by yourself. We will focus
+on the fasta (.aln) file for future analysis, now view it in aliview and
+see how it looks compared to the previous alignment.</p>
+<p><img alt="" src="/mnt/data/images_day4_tutorial/media/image24.png" />{width="6.5in"
+height="1.2527777777777778in"}</p>
+<p>What can we do for the variant called from each sample? We will discuss
+it in tomorrow's session.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

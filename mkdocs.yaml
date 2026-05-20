@@ -1,0 +1,38 @@
+site_name: Infectious Disease Concepts
+site_description: 10-day intensive course on epidemiology, genomics, and outbreak analysis
+site_author: King Abdullah University of Science and Technology (KAUST)
+
+theme:
+  name: material
+  logo: assets/logo.jpeg
+  favicon: assets/logo.jpeg
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Course Info: course_info.md
+  - Schedule: schedule.md
+  - Prerequisites: prerequisites.md
+  - Practicals:
+      - 1. Introduction to R: week1/day01.md
+      - 2. Introduction to Linux and HPC: week1/day02.md
+      - 3. Artemis: week1/day03.md
+      - 4. Genome Assembly and Variant Calling: week1/day04.md
+      - 5. Phylogeny: week1/day05.md
+      - 6. Outbreak: week2/day06.md
+      - 7. BEAST: week2/day07.md
+      - 8. Plasmidome analysis: week2/day08.md
+  - Resources: resources.md
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - codehilite
+
+extra_css:
+  - stylesheets/extra.css
