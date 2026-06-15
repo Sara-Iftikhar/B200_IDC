@@ -1,7 +1,167 @@
-.md-header__button.md-logo img {
-  height: 250px;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap");
+
+/* ---------------------------------------------------- */
+/* Formal academic color palette                          */
+/* ---------------------------------------------------- */
+
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color: #1b2a4a;
+  --md-primary-fg-color--light: #3a4f7a;
+  --md-primary-fg-color--dark: #101a30;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+}
+
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: #c9a227;
+  --md-accent-fg-color--transparent: rgba(201, 162, 39, 0.1);
+  --md-accent-bg-color: #ffffff;
+  --md-accent-bg-color--light: rgba(255, 255, 255, 0.7);
+}
+
+/* ---------------------------------------------------- */
+/* Header / logo                                          */
+/* ---------------------------------------------------- */
+
+.md-header {
+  height: 8.5rem;
+  border-bottom: 3px solid #c9a227;
+}
+
+.md-header__inner {
+  height: 100%;
+  align-items: center;
+}
+
+.md-header__button.md-logo {
+  display: flex;
+  align-items: center;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 8.6rem;
+  width: auto;
 }
 
 .md-header__title {
-  font-size: 2.3rem;
+  font-size: 2.0rem;
+  font-weight: 700;
+  font-family: "Playfair Display", "Roboto", serif;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+}
+
+.md-header__topic {
+  font-weight: 700;
+}
+
+/* Tabs bar a touch more refined */
+.md-tabs {
+  font-weight: 800;
+}
+
+/* ---------------------------------------------------- */
+/* Typography                                             */
+/* ---------------------------------------------------- */
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-family: "Playfair Display", "Roboto", serif;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--md-primary-fg-color);
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.3rem;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+}
+
+.md-typeset {
+  line-height: 1.65;
+}
+
+.md-typeset hr {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  margin: 1.5em 0;
+}
+
+.md-typeset a {
+  color: var(--md-primary-fg-color);
+  text-decoration: underline;
+  text-decoration-color: var(--md-accent-fg-color);
+}
+
+/* ---------------------------------------------------- */
+/* Tables                                                 */
+/* ---------------------------------------------------- */
+
+.md-typeset table:not([class]) {
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color);
+  color: #ffffff;
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+/* ---------------------------------------------------- */
+/* Admonitions                                            */
+/* ---------------------------------------------------- */
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 0.4rem;
+}
+
+/* ---------------------------------------------------- */
+/* Code blocks                                            */
+/* ---------------------------------------------------- */
+
+.md-typeset pre > code {
+  border-radius: 0.3rem;
+}
+
+/* ---------------------------------------------------- */
+/* Footer                                                 */
+/* ---------------------------------------------------- */
+
+.md-footer-meta {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+.md-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.md-footer .md-copyright__kaust-logo {
+  height: 2.5rem;
+  width: auto;
+}
+
+.md-copyright__highlight {
+  font-weight: 500;
 }

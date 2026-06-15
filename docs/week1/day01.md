@@ -1,3 +1,4 @@
+# 1. Introduction to R
 
 In this lesson, we will explore the basics of R, including its usage and advantages. You’ll also gain hands-on experience by writing code in your first RStudio notebook. Remember, as you progress through this lesson and the upcoming ones, that the best way to learn a new programming language is through trial and error and practical experience. Don’t worry if you encounter challenges with certain coding aspects—just being aware of what can be accomplished, even if you need to research how to do it, is a significant step forward!
 
