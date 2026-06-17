@@ -16,11 +16,11 @@ Your role is to analyze the available sequence and case data to trace possible t
 We begin by loading the required R packages for the analysis:
 
 ```bash
-library(ape) \# Phylogenetic reconstruction
+library(ape) # Phylogenetic reconstruction
 
-library(adegenet) \# Genetic clustering and SeqTrack transmission analysis library(igraph) \# Network analysis and visualization
+library(adegenet) # Genetic clustering and SeqTrack transmission analysis library(igraph) # Network analysis and visualization
 
-library(outbreaker2) \# Probabilistic outbreak reconstruction version 1.1.3
+library(outbreaker2) # Probabilistic outbreak reconstruction version 1.1.3
 ```
 
 **Load and inspect case metadata:**
@@ -32,7 +32,7 @@ We’ll begin by importing the case metadata:
 The case data include several important fields. Each row represents a patient, identified by the id column. The *collec.dates* field records the sample collection date in yyyy-mm-dd format. Additional patient information includes sex (gender), age, and peak.fever, which reflects the highest recorded body temperature during illness. The outcome column summarizes the clinical result for each case (e.g., recovered or deceased). An extra column, notes, contains supplementary information. Notably, case 28 is flagged for potential DNA contamination, possibly due to a mixed sample.
 
 ```bash
-cases \<- read.csv("http://adegenet.r-forge.r project.org/files/fakeOutbreak/cases.csv")
+cases <- read.csv("http://adegenet.r-forge.r project.org/files/fakeOutbreak/cases.csv")
 
 head(cases)
 ```
@@ -42,11 +42,11 @@ head(cases)
 Since we’ll need to work with the collection dates for temporal analysis, we first convert the collec.dates column from character strings to Date objects. We then calculate a new variable, days, which represents the number of days since the first sample was collected (considered as day 0). This will allow us to easily compare timing across cases.
 
 ```bash
-dates \<- as.Date(cases\$collec.dates)
+dates <- as.Date(cases$collec.dates)
 
 range(dates)
 
-days \<- as.integer(difftime(dates, min(dates), unit="days"))
+days <- as.integer(difftime(dates, min(dates), unit="days"))
 
 days
 ```
@@ -56,7 +56,7 @@ days
 The viral genome sequences corresponding to the 30 cases are retrieved from the server and imported into R using the *fasta2DNAbin()* function, which reads the FASTA file and stores the sequences in a format suitable for genetic analysis:
 
 ```bash
-dna \<- fasta2DNAbin("<http://adegenet.r-forge.r-project.org/files/fakeOutbreak/alignment.fa>")
+dna <- fasta2DNAbin("<http://adegenet.r-forge.r-project.org/files/fakeOutbreak/alignment.fa>")
 ```
 
 **Genetic distance distribution:**
@@ -64,7 +64,7 @@ dna \<- fasta2DNAbin("<http://adegenet.r-forge.r-project.org/files/fakeOutbreak/
 To get a sense of the genetic diversity among the sampled viral genomes, we calculate pairwise Hamming distances, which count the number of nucleotide differences between each pair of sequences. This gives a simple measure of genetic divergence. We then visualize the distribution of these distances to explore how similar or different the sequences are:
 
 ```bash
-D \<- dist.dna(dna, model="N")
+D <- dist.dna(dna, model="N")
 
 hist(D, col="royalblue", nclass=30,
 
@@ -80,7 +80,7 @@ Despite the short timeframe and small genome size, the observed genetic variatio
 To investigate whether this variation is randomly spread across the genome—or concentrated in specific regions—we can extract the positions of single nucleotide polymorphisms (SNPs). This can be done easily using the *seg.sites()* function, which identifies all variable sites in the alignment:
 
 ```bash
-snps \<- seg.sites(dna)
+snps <- seg.sites(dna)
 
 head(snps)
 
@@ -96,7 +96,7 @@ xlab="Nucleotide position", ylab="SNP density",
 
 main="Location of the SNPs in the genome", lwd=2)
 
-points(snps, rep(0, length(snps)), pch="\|", col="red")
+points(snps, rep(0, length(snps)), pch="|", col="red")
 
 mtext(side=3, text="blue: density of SNPs red bars: actual SNP positions")
 ```
@@ -108,25 +108,25 @@ Here, the polymorphism seems to be distributed fairly randomly.
 To explore the evolutionary relationships among the taxa, we generated a phylogenetic tree based on pairwise genetic distances. The Neighbour-Joining method was used for tree reconstruction, as it efficiently clusters taxa based on their genetic divergence. Rather than relying on simple nucleotide mismatch counts—which may overlook important substitution patterns—we applied the Tamura-Nei model. This distance metric accounts for unequal substitution rates between transitions and transversions, offering a more nuanced view of sequence divergence. Alternative distance measures are also available through the *dist.dna* function in R.
 
 ```bash
-\# Compute pairwise genetic distances using the Tamura-Nei 93 (TN93) model
+# Compute pairwise genetic distances using the Tamura-Nei 93 (TN93) model
 
-D.tn93 \<- dist.dna(dna, model = "TN93")
+D.tn93 <- dist.dna(dna, model = "TN93")
 
-\# Construct a phylogenetic tree using the Neighbor-Joining (NJ) algorithm
+# Construct a phylogenetic tree using the Neighbor-Joining (NJ) algorithm
 
-tre \<- nj(D.tn93)
+tre <- nj(D.tn93)
 
-\# Root the tree at the first taxon (assumed to be the first case)
+# Root the tree at the first taxon (assumed to be the first case)
 
-tre \<- root(tre, 1)
+tre <- root(tre, 1)
 
-\# Rearrange the tree in a ladderized format for improved readability
+# Rearrange the tree in a ladderized format for improved readability
 
-tre \<- ladderize(tre)
+tre <- ladderize(tre)
 
-\# Customize the tip labels to show case number and corresponding collection day tre\$tip.label \<- paste("Case", 1:30, "/ Day", days)
+# Customize the tip labels to show case number and corresponding collection day tre$tip.label <- paste("Case", 1:30, "/ Day", days)
 
-\# Plot the tree with thicker edges and color-coded tips based on collection day plot(tre, edge.width = 2, tip.col = num2col(days, col.pal = seasun)) title("Neighbor-Joining Tree (TN93 distances)")
+# Plot the tree with thicker edges and color-coded tips based on collection day plot(tre, edge.width = 2, tip.col = num2col(days, col.pal = seasun)) title("Neighbor-Joining Tree (TN93 distances)")
 
 mtext(side = 3, text = "Rooted to first case")
 ```
@@ -138,20 +138,20 @@ Identifying epidemiological clusters based on phylogenetic trees can be challeng
 Try a few values; you should see that 3 groups are obtained for anything between 15 and 25 mutations, with the result looking like this:
 
 ```bash
-clust \<- gengraph(D)
+clust <- gengraph(D)
 ```
 ```bash
 clust
 
-plot(clust\$g, main="Clusters obtained by gengraph") cases\[28,\]
+plot(clust$g, main="Clusters obtained by gengraph") cases[28,]
 
-plot(tre, tip.color=clust\$col\[clust\$clust\$membership\], type="unrooted") title("Neighbour-Joining tree (TN93 distances)")
+plot(tre, tip.color=clust$col[clust$clust$membership], type="unrooted") title("Neighbour-Joining tree (TN93 distances)")
 
 mtext(side=3, text="(unrooted tree)")
 
-legend("bottomleft", fill=clust\$col, legend=paste("group",1:3), title="Cluster of cases")
+legend("bottomleft", fill=clust$col, legend=paste("group",1:3), title="Cluster of cases")
 
-cases\[28,\]
+cases[28,]
 ```
 
 **Transmission Reconstruction with SeqTrack:**
@@ -159,9 +159,9 @@ cases\[28,\]
 While the phylogenetic tree provides insights into potential transmission links, it does not take into account the timing of sample collection. To address this, the SeqTrack algorithm was developed. SeqTrack reconstructs ancestral relationships among sampled sequences by combining genetic distances with collection dates, generating a tree that minimizes the number of mutations (i.e., achieves maximum parsimony). In adegenet, this approach is implemented via the seqTrack function. In the following example, we apply seqTrack to the matrix of pairwise distances (distmat), specifying the case identifiers *(x.names = cases\$id)* and their associated collection dates *(x.dates = dates)*:
 
 ```bash
-distmat \<- as.matrix(D)
+distmat <- as.matrix(D)
 
-sqtk.res \<- seqTrack(distmat, x.names=cases\$id, x.dates=dates)
+sqtk.res <- seqTrack(distmat, x.names=cases$id, x.dates=dates)
 
 class(sqtk.res)
 
@@ -183,25 +183,25 @@ The result *sqtk.res* is a *data.frame* with the special class *seqTrack*, conta
 seqTrack objects can be plotted simply using:
 
 ```bash
-\# Assuming sqtk.res\$weight contains your edge weights
+# Assuming sqtk.res$weight contains your edge weights
 
-res \<- sqtk.res
+res <- sqtk.res
 
-weights \<- sqtk.res\$weight
+weights <- sqtk.res$weight
 
-\# Replace NA with a small positive value
+# Replace NA with a small positive value
 
-weights\[is.na(weights)\] \<- 1e-6
+weights[is.na(weights)] <- 1e-6
 
-weights\[weights==0\] \<- 0.01
+weights[weights==0] <- 0.01
 
-\# Update sqtk.res with the adjusted weights
+# Update sqtk.res with the adjusted weights
 
-res\$weight \<- weights
+res$weight <- weights
 
-\# Now, you can plot using the adjusted weights
+# Now, you can plot using the adjusted weights
 
-g\<-plot(res, main = "SeqTrack reconstruction of the outbreak")
+g<-plot(res, main = "SeqTrack reconstruction of the outbreak")
 
 mtext(side=3, text="red: no/few mutations; grey: many mutations")
 
@@ -228,9 +228,9 @@ We now proceed to run outbreaker, supplying the pathogen DNA sequences, their co
 fake_outbreak
 ```
 ```bash
-col \<- "#6666cc"
+col <- "#6666cc"
 
-plot(fake_outbreak\$w, type = "h", xlim = c(0, 5),
+plot(fake_outbreak$w, type = "h", xlim = c(0, 5),
 
 lwd = 30, col = col, lend = 2,
 
@@ -248,21 +248,21 @@ In outbreaker2, outbreak reconstruction is conducted using the outbreaker() func
 ```bash
 args(outbreaker)
 
-dna \<- fake_outbreak\$dna
+dna <- fake_outbreak$dna
 
-dates \<- fake_outbreak\$sample
+dates <- fake_outbreak$sample
 
-ctd \<- fake_outbreak\$ctd
+ctd <- fake_outbreak$ctd
 
-w \<- fake_outbreak\$w
+w <- fake_outbreak$w
 
-data \<- outbreaker_data(dna = dna, dates = dates, ctd = ctd, w_dens = w)
+data <- outbreaker_data(dna = dna, dates = dates, ctd = ctd, w_dens = w)
 
-\## we set the seed to ensure results won't change
+## we set the seed to ensure results won't change
 
 set.seed(1)
 
-res \<- outbreaker(data = data)
+res <- outbreaker(data = data)
 ```
 
 This analysis typically requires about 40 seconds to complete on a standard modern computer. Although outbreaker2 may appear slower than the original outbreaker package when comparing the same number of iterations, the underlying algorithms differ substantially. Notably, outbreaker2 executes a greater number of parameter updates during each MCMC iteration, promoting more effective mixing. As a result, despite the increased computational time per iteration, fewer total iterations are needed to achieve convergence.
@@ -274,9 +274,9 @@ Each row in res corresponds to a single MCMC sample. For every sample, informati
 ```bash
 class(res)
 
-\#\> \[1\] "outbreaker_chains" "data.frame" dim(res)
+#> [1] "outbreaker_chains" "data.frame" dim(res)
 
-\#\> \[1\] 201 98
+#> [1] 201 98
 
 res names(res)
 ```
@@ -292,7 +292,7 @@ plot(res, "mu")
 
 plot(res, "t_inf_15")
 
-\## compare this to plot(res)
+## compare this to plot(res)
 
 plot(res, burnin = 2000)
 ```
@@ -304,23 +304,23 @@ The type argument controls the style of plot to generate, with several options a
 ```bash
 plot(res, "mu", "hist", burnin = 2000)
 
-\#\> \`stat_bin()\` using \`bins = 30\`. Pick better value with \`binwidth\`.
+#> \`stat_bin()\` using \`bins = 30\`. Pick better value with \`binwidth\`.
 
 plot(res, "mu", "density", burnin = 2000)
 
 plot(res, type = "alpha", burnin = 2000)
 
-\#\> Warning: \`guides(\<scale\> = FALSE)\` is deprecated. Please use \`guides(\<scale\> =
+#> Warning: \`guides(<scale> = FALSE)\` is deprecated. Please use \`guides(<scale> =
 
-\#\> "none")\` instead.
+#> "none")\` instead.
 
 plot(res, type = "t_inf", burnin = 2000)
 
-\#\> Warning: \`guides(\<scale\> = FALSE)\` is deprecated. Please use \`guides(\<scale\> = \#\> "none")\` instead.
+#> Warning: \`guides(<scale> = FALSE)\` is deprecated. Please use \`guides(<scale> = #> "none")\` instead.
 
 plot(res, type = "kappa", burnin = 2000)
 
-\#\> Warning: \`guides(\<scale\> = FALSE)\` is deprecated. Please use \`guides(\<scale\> = \#\> "none")\` instead.
+#> Warning: \`guides(<scale> = FALSE)\` is deprecated. Please use \`guides(<scale> = #> "none")\` instead.
 
 plot(res, type = "network", burnin = 2000, min_support = 0.01)
 ```
@@ -336,7 +336,7 @@ summary(res)
 **Customising settings and priors:**
 
 ```bash
-config2 \<- create_config(n_iter = 3e4,
+config2 <- create_config(n_iter = 3e4,
 
 > sample_every = 20, init_tree ="star",
 >
@@ -344,7 +344,7 @@ config2 \<- create_config(n_iter = 3e4,
 
 set.seed(1)
 
-res2 \<- outbreaker(data, config2)
+res2 <- outbreaker(data, config2)
 
 plot(res2)
 ```
