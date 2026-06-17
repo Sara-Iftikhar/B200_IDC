@@ -207,6 +207,10 @@ mtext(side=3, text="red: no/few mutations; grey: many mutations")
 
 g
 
+# XQuartz is required for interactive/dynamic plots on macOS.
+# Install it in the Terminal with:
+# brew install --cask xquartz
+# Or download it manually from https://www.xquartz.org
 tkplot(g)
 ```
 
