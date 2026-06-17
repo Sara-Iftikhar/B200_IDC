@@ -229,6 +229,8 @@ my_data_frame[1, ]  # Access the first row
 ```
 
 # Large Data Frame and Subsetting  
+
+```r
 y <- matrix(1:60000, nrow = 200, ncol = 300)  
 df <- data.frame(y)  
 head(df)  
@@ -236,6 +238,7 @@ df$X1
 df[, 1]  
 df[1, ]  
 df[20:23, c(3, 5)]
+```
 
 These data types allow you to organize and manipulate data effectively in R, making it easier to perform analyses and visualize results.
 
