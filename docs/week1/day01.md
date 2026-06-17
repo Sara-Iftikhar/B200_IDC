@@ -52,7 +52,7 @@ git clone https://github.com/gzhoubioinf/IDE_RTutorial.git
 3. Change to the tutorial directory:
 
 ```bash
-cd IDE_Rtutorial
+cd IDE_RTutorial
 ```
 
 You’re now ready to start the exercises using the files you’ve just downloaded.
@@ -73,7 +73,7 @@ The way this data is stored in the computer’s memory and accessed is quite sim
 Storing and manipulating data in R is quite straightforward. You can create and store an object using the assignment operator `<-` as follows:
 
 ```r
-my_integer <- 7
+my_integer <- 7L
 my_decimal <- 10.2
 my_string <- "hello"
 ```
@@ -99,7 +99,7 @@ To manipulate your stored information in R, you have access to several operators
   - `a * b`: Multiplication
   - `a / b`: Division
 - **Exponentiation**:
-  - `a ** b`: Returns `a` raised to the power of `b`.
+  - `a ^ b`: Returns `a` raised to the power of `b`.
 - **Modulus**:
   - `a %% b`: Returns the remainder after dividing `a` by `b`.
 - **Array Indexing**:
@@ -161,7 +161,7 @@ my_vector <- c(1, 2, 3, 4)
 ```r
 my_vector[1]  # Access the first element
 my_vector[c(1,4)] # Takes the 1st and 4th elements of a vector.
-my_vector[2,4] 
+my_vector[c(2,4)] # Takes the 2nd and 4th elements
 ```
 
 ### 2. Matrix
@@ -463,6 +463,8 @@ Assuming your CSV file is in the same directory as your R script, you can read t
 my_data <- read_csv("Compensation.csv")
 ```
 
+> Note: `read_csv()` (from readr) returns a tibble and automatically guesses each column's type, whereas base R's `read.csv()` returns a data.frame. Either is fine for this course.
+
 ### Checking Your Imported Data in R
 
 After importing your data into R, it’s crucial to verify that everything has been read correctly. Just because there are no error messages doesn’t guarantee that the data is as expected. Here’s a checklist of things to assess, along with useful R functions to help you.
@@ -578,6 +580,8 @@ subset_data <- select(my_data, -ColumnToExclude)
 **Example**
 
 ```r
+library(tidyverse)
+
 # Jiayi and Mohammed’s Measurements
 name <- c(rep("Jiayi", 10), rep("Mohammed", 10))
 clades <- rep(c(rep("CladeA", 5), rep("CladeB", 5)), 2)
