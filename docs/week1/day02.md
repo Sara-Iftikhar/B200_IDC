@@ -174,8 +174,8 @@ cd tmp
 Copy a file:
 
 ```bash
-cp sequence.gb tmp
-ls tmp/
+cp ../sequence.gb .
+ls
 ```
 
 Example output:
@@ -338,7 +338,6 @@ find . -name "mynewfile"
 find . -name "my*"
 find . -name "f*"
 find . -name "*f*"
-find . -name "^f*"
 ```
 
 The period `.` means the current working directory.
@@ -581,19 +580,19 @@ This section introduces a simple Bash workflow that creates files and combines t
 ### Step 1: Create the Script File
 
 ```bash
-touch pipline.sh
+touch pipeline.sh
 ```
 
 ### Step 2: Write the Script
 
 ```bash
-vim pipline.sh
+vim pipeline.sh
 ```
 
 Script contents:
 
 ```bash
-mkdir test
+mkdir -p test
 cd test
 for i in {1..100}; do
   touch file_${i}.txt
@@ -605,7 +604,7 @@ cat file_* > tot_file.txt
 ### Making Scripts Executable
 
 ```bash
-chmod +x pipline.sh
+chmod +x pipeline.sh
 ```
 
 ### Running the Script
@@ -688,7 +687,7 @@ done
 Check the queue and view output:
 
 ```bash
-squeue -me
+squeue --me
 less output_assembly_N1059.fasta.txt
 ```
 
