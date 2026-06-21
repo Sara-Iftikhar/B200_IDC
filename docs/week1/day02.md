@@ -178,6 +178,10 @@ cp ../sequence.gb .
 ls
 ```
 
+```bash
+cd tmp
+```
+
 Example output:
 
 ```text
