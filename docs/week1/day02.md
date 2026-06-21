@@ -656,7 +656,7 @@ SLURM manages job scheduling on HPC systems.
 Go to the working directory and create a job script:
 
 ```bash
-cd /ibex/project/c2205/IDE_course/Day2_Intro_Linux/assembly_test
+cd /ibex/project/c2325/B200/Day2_Intro_Linux/assembly_test
 vim amrfinder.sh
 ```
 
