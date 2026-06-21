@@ -178,10 +178,6 @@ cp ../sequence.gb .
 ls
 ```
 
-```bash
-cd tmp
-```
-
 Example output:
 
 ```text
@@ -220,15 +216,15 @@ There are two main ways to specify locations in Linux: absolute paths and relati
 #### File Structure Visualization
 
 ```text
-/Users/username/
-└── IDE_LinuxTutorial/
-    ├── fasta_files/
-    │   ├── frog.fasta
-    │   ├── human.fasta
-    │   └── mouse.fasta
-    ├── testfolder/
-    │   └── READMEcopy.md
-    ├── README.md
+/Users/username/IDE_LinuxTutorial/
+└├── README.md
+├── fasta_files
+│   ├── README.md
+│   ├── frog.fasta
+│   ├── human.fasta
+│   └── mouse.fasta
+├── sequence_1.gb
+└── tmp
     └── sequence.gb
 ```
 
@@ -248,7 +244,7 @@ Examples:
 cd ~
 
 # Navigate directly using an absolute path
-cd /Users/username/IDE_LinuxTutorial/testfolder
+cd /Users/username/IDE_LinuxTutorial/tmp
 ```
 
 #### Relative Paths
@@ -263,11 +259,11 @@ cd fasta_files
 Example of an invalid relative path from inside `fasta_files`:
 
 ```bash
-cd testfolder
-# Error: bash: cd: testfolder: No such file or directory
+cd tmp
+# Error: bash: cd: tmp: No such file or directory
 ```
 
-This happens because `fasta_files` and `testfolder` are sibling directories.
+This happens because `fasta_files` and `tmp` are sibling directories.
 
 #### Path Navigation Symbols
 
@@ -275,17 +271,17 @@ This happens because `fasta_files` and `testfolder` are sibling directories.
 - `..` = parent directory
 - `~` = home directory
 
-To correctly navigate from `fasta_files` to `testfolder`:
+To correctly navigate from `fasta_files` to `tmp`:
 
 ```bash
 # First go up one level
 cd ..
 
-# Then go down into testfolder
-cd testfolder
+# Then go down into tmp
+cd tmp
 
 # Or combine both steps
-cd ../testfolder
+cd ../tmp
 ```
 
 ### Directory Navigation Shortcuts
@@ -418,8 +414,7 @@ for i in {0..50}; do
 more file_14.txt
 cat file_* > tot_file.txt
 less tot_file.txt
-sort tot_file.txt
-sort -n tot_file.txt
+sort -V tot_file.txt
 ```
 
 ## Analyzing File Content (`wc`, `grep`)
@@ -640,7 +635,6 @@ module avail
 
 # Search for specific software
 module avail python
-module spider blast
 
 # Load a specific version
 module load python/3.11.0
