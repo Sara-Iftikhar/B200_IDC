@@ -22,7 +22,7 @@ In today’s session, we will use replicon sequences from the PlasmidFinder data
 
 ```bash
 ssh -X <YourUserName>@ilogin.ibex.kaust.edu.sa
-cp -r /ibex/project/c2325/B294c/Practical_sessions/Day8_Plasmidome/* /ibex/user/<YourUserName>
+cp -r /ibex/project/c2325/B200/Day8_Plasmidome/* /ibex/user/<YourUserName>
 ls
 ```
 
@@ -31,7 +31,7 @@ ls
 Download _HKPR018.fasta_ to your local machine, open the terminal on your computer and try below command:
 
 ```bash
-scp <YourUserName>@ilogin.ibex.kaust.edu.sa:/ibex/project/c2325/B294c/Practical_sessions/Day8_Plasmidome/HKPR018.fasta /path/to/local/destination
+scp <YourUserName>@ilogin.ibex.kaust.edu.sa:/ibex/project/c2325/B200/Day8_Plasmidome/HKPR018.fasta /path/to/local/destination
 ```
 
 ![image](./images8/image01.png)
@@ -74,7 +74,7 @@ mge-cluster (<https://gitlab.com/sirarredondo/mge-cluster>) is a bioinformatics 
 
 This approach enables easy sharing of clustering models and standardisation of plasmid typing across research groups. As such, mge-cluster is a valuable tool for developing and maintaining a consistent classification framework for MGEs, which is critical for tracking the spread of elements carrying genes of concern, such as antimicrobial resistance determinants across bacterial populations.
 
-Log in to your IBEX account and copy today’s file to your folder if you haven’t done yet. We provide 84 distinct plasmid contigs identified from our research data _(/ibex/project/c2325/B294c/Practical_sessions/Day8_Plasmidome/plasmids)_, see the _plasmid_list_ for your reference.
+Log in to your IBEX account and copy today’s file to your folder if you haven’t done yet. We provide 84 distinct plasmid contigs identified from our research data _(/ibex/project/c2325/B200/Day8_Plasmidome/plasmids)_, see the _plasmid_list_ for your reference.
 
 ### View the run_mge_cluster.sh:
 

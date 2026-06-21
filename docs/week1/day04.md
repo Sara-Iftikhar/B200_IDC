@@ -99,7 +99,7 @@ Now, log in to IBEX and copy today’s tutorial materials to your scratch folder
 
 ```bash
 ssh -X <YourUserName>@ilogin.ibex.kaust.edu.sa
-cp -r /ibex/project/c2325/B294c/Practical_sessions/Day4_Assembly_Mapping/* /ibex/user/<YourUserName>
+cp -r /ibex/project/c2325/B200/Day4_Assembly_Mapping/* /ibex/user/<YourUserName>
 ls
 ```
 

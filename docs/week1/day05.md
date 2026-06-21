@@ -61,7 +61,7 @@ Today, we will use FastTree, a widely used tool that approximates Maximum Likeli
 Log in to the IBEX and set your directory for today’s session.
 
 ```bash
-cp -r /ibex/project/c2325/B294c/Practical_sessions/Day5_Phylogeny/\* /ibex/user/\<YourUserName\>
+cp -r /ibex/project/c2325/B200/Day5_Phylogeny/\* /ibex/user/\<YourUserName\>
 
 ls
 ```
