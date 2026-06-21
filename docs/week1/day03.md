@@ -87,7 +87,7 @@ Artemis is a free genome browser and annotation tool that allows visualisation o
 1. Create a new conda environment
 
 ```bash
-conda create -n artemis
+conda create -n artemis openjdk=11 -y
 ```
 
 2. Activate your artemis environment
@@ -144,6 +144,12 @@ art
 ```
 
 A small start-up window will open (refer to the image below), click ‘OK’ to set the home directory (keep default path). All the necessary files for this module can be found in the Day3_Artemis directory.
+
+Download the Day3_Artemis folder from IBEX to the current local directory
+
+```bash
+scp -r username@ilogin.ibex.kaust.edu.sa:/ibex/project/c2325/B200/Day3_Artemis/ .
+```
 
 ![image8](./images3_1/image8.png)
 
