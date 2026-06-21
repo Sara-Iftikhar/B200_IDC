@@ -26,6 +26,8 @@ For the NJ tree construction, we use the R ape package (https://cran.r-project.o
 
 Today’s work can be mainly done on your laptop. Open the R Markdown _Day5_phylogeny.Rmd_ in RStudio, and make sure the _ST231.snp_sites.aln_ is in your R working directory:
 
+Note that file _ST231.snp_sites.aln_ can be named as _KP.snp_sites.aln_.
+
 ![image](./images5/image01.png)
 
 ![image](./images5/image02.png)
@@ -119,6 +121,8 @@ For these samples, we have prepared a metadata table that provides important con
 ![image](./images5/image11.png)
 
 Let’s continue the R Markdown code in R Studio:
+
+Note that file _metadata_for_plot.tsv_ can be named as _metadata.csv_.
 
 ![image](./images5/image12.png)
 
